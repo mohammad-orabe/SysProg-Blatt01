@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/orabe/Library/Mobile Documents/com~apple~CloudDocs/TU/4. Semester 20/SPR20/HA/HA1/Vorgaben Praxisteil-20200507/prio_q.c
+prio_q.h
+/Users/orabe/Library/Mobile Documents/com~apple~CloudDocs/TU/4. Semester 20/SPR20/HA/HA1/Vorgaben Praxisteil-20200507/prio_q.h
+
+/Users/orabe/Library/Mobile Documents/com~apple~CloudDocs/TU/4. Semester 20/SPR20/HA/HA1/Vorgaben Praxisteil-20200507/prio_q.h
+stdio.h
+-
+stdlib.h
+-
+

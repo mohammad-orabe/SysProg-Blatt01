@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/orabe/Library/Mobile Documents/com~apple~CloudDocs/TU/4. Semester 20/SPR20/HA/HA1"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/orabe/Library/Mobile Documents/com~apple~CloudDocs/TU/4. Semester 20/SPR20/HA/HA1/cmake-build-debug
