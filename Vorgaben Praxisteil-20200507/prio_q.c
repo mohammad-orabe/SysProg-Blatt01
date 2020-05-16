@@ -18,13 +18,14 @@ void prio_q_enqueue(struct prio_q *q, void *data, int prio)
     new_node->priority = prio;
     new_node->next = NULL;
 
-    struct prio_q_elem* node_ref = (struct prio_q_elem *) &(q->front);
-
+    struct prio_q_elem* node_ref = (struct prio_q_elem *) (q->front);
+    struct prio_q_elem* node_prev = (struct prio_q_elem *) (q->front);
     while(node_ref->next != NULL && node_ref->next->priority >= prio){
+        node_prev = node_ref;
         node_ref = node_ref->next;
     }
-    new_node->next = node_ref->next;
-    node_ref->next = new_node;
+//    new_node->next = node_ref->next;
+//    node_ref->next = new_node;
     q->size++;
 }
 
@@ -54,6 +55,7 @@ int prio_q_destroy(struct prio_q *q, void ** data)
     struct prio_q_elem* temp = q->front;
     while(q->front != NULL){
         temp = q->front;
+        data[counter] = temp;
         q->front = q->front->next;
         counter++;
         free(temp);
@@ -65,8 +67,9 @@ int prio_q_destroy(struct prio_q *q, void ** data)
 void prio_q_print(struct prio_q * q, void (*print_data)(void*))
 {
 	// Implementierung dieser Funktion ist OPTIONAL und wird daher NICHT BEWERTET!
-    while(q->front != NULL){
-        print_data(q->front->data);
-        q->front = q->front->next;
+	struct prio_q_elem* temp = q->front;
+    while(temp != NULL){
+        print_data(temp->next);
+        temp = temp->next;
     }
 }
