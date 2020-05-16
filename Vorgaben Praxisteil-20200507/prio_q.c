@@ -20,6 +20,7 @@ void prio_q_enqueue(struct prio_q *q, void *data, int prio)
 
     struct prio_q_elem* node_ref = (struct prio_q_elem *) (q->front);
     struct prio_q_elem* node_prev = (struct prio_q_elem *) (q->front);
+
     while(node_ref->next != NULL && node_ref->priority >= prio){
         node_prev->next = node_ref->next;
         node_ref = node_ref->next;
